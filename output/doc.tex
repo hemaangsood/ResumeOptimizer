@@ -1,0 +1,154 @@
+
+\documentclass[a4paper,10pt]{article}
+
+% -------------------- PACKAGES --------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{multicol}
+\usepackage{tabularx}
+
+\geometry{letterpaper, margin=0.7in}
+\setlist[itemize]{noitemsep,leftmargin=*}
+\setstretch{1.05}
+\hypersetup{hidelinks}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% -------------------- SECTION FORMAT --------------------
+\titleformat{\section}
+{\large\bfseries}
+{}
+{0pt}
+{}
+[\titlerule]
+
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+
+% -------------------- DOCUMENT --------------------
+\begin{document}
+
+% -------------------- HEADER --------------------
+\begin{center}
+{\LARGE \textbf{ John Door }}\\[4pt]
+
++1 696 969 6969 \;|\; john.door@gmail.com \;|\; LinkedIn: john-door-123456 \\ 
+Github: johndoor \;|\; Portfolio: johndoor.github.io
+
+\end{center}
+
+% -------------------- SKILLS --------------------
+\section{Skills}
+
+\begin{center}
+\begin{minipage}{0.95\textwidth}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash\setlength{\parindent}{0pt}}X >{\raggedright\arraybackslash\setlength{\parindent}{0pt}}X@{}}
+
+                                             
+\begin{minipage}[t]{\linewidth}
+\textbf{Languages }\\[-2pt]
+Python, SQL, JavaScript, Go, Java, Kotlin, HTML, CSS
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}
+\textbf{Web Development }\\[-2pt]
+Django, Spring boot, React.js (NextJS, Remix), FastAPI, Next-auth, Redux, Tailwind CSS, NodeJS
+\end{minipage}
+\\[8pt]
+
+                                             
+\begin{minipage}[t]{\linewidth}
+\textbf{Cloud, DevOps \& Tools }\\[-2pt]
+AWS (EC2, S3), Git, GitHub, Docker, Nginx, Postman
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}
+\textbf{CI/CD \& Testing }\\[-2pt]
+GitLab CI/CD, Docker-in-Docker, pytest, Poetry, PostGIS
+\end{minipage}
+\\[8pt]
+
+                                             
+\begin{minipage}[t]{\linewidth}
+\textbf{AI \& ML }\\[-2pt]
+PyTorch, TensorFlow, OpenCV, OpenAI Gym, HuggingFace(Transformers), xgboost
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}
+\textbf{Data Analysis }\\[-2pt]
+Pandas, Numpy, Matplotlib, Plotly, Tableau, SQL
+\end{minipage}
+\\[8pt]
+
+                                             
+\begin{minipage}[t]{\linewidth}
+\textbf{Automation \& Scraping }\\[-2pt]
+Selenium, Beautiful Soup, Web-Scraping
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}
+\textbf{Databases }\\[-2pt]
+MongoDB (Atlas), PostgresSQL (Supabase), Oracle Database, FAISS, Qdrant, Redis
+\end{minipage}
+\\[8pt]
+
+
+\end{tabularx}
+\end{minipage}
+\end{center}
+% -------------------- EXPERIENCE --------------------
+\section{Experience}
+
+\textbf{Company 1 } \\
+\textit{ Employee } \hfill 
+\begin{itemize}
+\item Developed and maintained statistical models to optimize credit policies.
+\item Built a full-stack project using MERN with Vite.js and Tailwind CSS, focusing on modular UI design and API integration.
+\item Implemented a backend server for an Insurance Management System using Springboot, emphasizing scalability and security.
+\end{itemize}
+\vspace{2pt}
+\textbf{Company 2 } \\
+\textit{ Intern } \hfill 
+\begin{itemize}
+\item Developed an Authentication and Authorization module as part of the internship.
+\item Created a Large Language Model (LLM) interface to process and extract insights from sensitive documents, enhancing accessibility.
+\end{itemize}
+\vspace{2pt}
+
+% -------------------- PROJECTS --------------------
+\section{Projects}
+
+\textbf{Project 1 }
+\begin{itemize}
+\item Item 1
+\item Item 2
+\end{itemize}
+\textbf{Project 2 }
+\begin{itemize}
+\item Item 1
+\item Item 2
+\end{itemize}
+
+% -------------------- EDUCATION --------------------
+\section{Education}
+
+\textbf{University } \hfill 2026 -- Present \\
+\textit{ Electrical \& Computer Engineering, Degree } \\
+GPA - 4.0 / 4.0 \\[4pt]
+\textbf{College } \hfill 2021 -- 2025 \\
+\textit{ Bachelor of Stuff } \\
+GPA - 10.0 / 10.0 \\[4pt]
+
+% -------------------- ACHIEVEMENTS --------------------
+\section{Achievements}
+
+\begin{itemize}
+\item Achievement 1
+\item Achievement 2
+\end{itemize}
+
+\end{document}

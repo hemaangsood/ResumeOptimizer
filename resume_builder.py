@@ -130,7 +130,7 @@ def compile_pdf(out_dir: Path) -> None:
 def main() -> None:
     args = parse_args()
 
-    project_dir = Path(__file__).resolve()
+    project_dir = Path(__file__).resolve().parent
     load_dotenv(project_dir / ".env")
 
     jd_text = load_job_description(args)

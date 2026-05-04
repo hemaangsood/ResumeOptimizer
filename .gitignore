@@ -4,3 +4,7 @@
 *.log
 **.venv
 *.env
+**venv**
+*.out
+*.aux
+*.json

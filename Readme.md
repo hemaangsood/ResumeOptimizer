@@ -25,40 +25,41 @@ Quick Setup (Windows)
 
 Run the setup script:
 
-setup.bat
+`setup.bat` in cmd or `cmd /c setup.bat` in powershell
 
 This will automatically:
 - Create a Python virtual environment
 - Install all dependencies
 - Create a .env file
-- Guide you to add your OpenAI API key
+- Optionally prompt for your OpenAI API key, or let you add it later
 
 Manual Setup
 
 1. Clone the repository
 
-git clone <repository-url>
-cd ResumeOptimizer
+`git clone https://github.com/hemaangsood/ResumeOptimizer.git`
+
+`cd ResumeOptimizer`
 
 2. Create a virtual environment
 
-python -m venv venv
+`python -m venv venv`
 
 On Windows:
-venv\Scripts\activate
+`venv\Scripts\activate`
 
 On macOS/Linux:
-source venv/bin/activate
+`source venv/bin/activate`
 
 3. Install dependencies
 
-pip install -r req.txt
+`pip install -r req.txt`
 
 4. Set up environment variables
 
 Create a .env file in the project root:
 
-OPENAI_API_KEY=your_openai_api_key_here
+`OPENAI_API_KEY=your_openai_api_key_here`
 
 Replace your_openai_api_key_here with your actual OpenAI API key from https://platform.openai.com/api-keys
 
@@ -70,35 +71,39 @@ Usage
 
 Basic usage with a job description file:
 
-python resume_builder.py --jd-file path/to/job_description.txt
+`python resume_builder.py --jd-file path/to/job_description.txt`
 
 Provide job description directly:
 
-python resume_builder.py --jd "Your job description text here"
+`python resume_builder.py --jd "Your job description text here"`
 
 Pipe job description from a file:
 
-cat job_description.txt | python resume_builder.py
+`type job_description.txt | python resume_builder.py`
+
+PowerShell equivalent:
+
+`Get-Content job_description.txt | python resume_builder.py`
 
 Specify custom resume and output directory:
 
-python resume_builder.py --jd-file jd.txt --resume-tex MyResume.tex --output-dir ./my_output
+`python resume_builder.py --jd-file jd.txt --resume-tex MyResume.tex --output-dir ./my_output`
 
 Skip PDF compilation (generate LaTeX only):
 
-python resume_builder.py --jd-file jd.txt --skip-compile
+`python resume_builder.py --jd-file jd.txt --skip-compile`
 
 Interactive mode (if no job description provided):
 
-python resume_builder.py
+`python resume_builder.py`
 
 Command-line arguments:
 
---jd TEXT                Provide job description directly
---jd-file PATH          Path to job description file
---resume-tex PATH       Path to LaTeX resume (default: Resume.tex)
---output-dir PATH       Output directory for generated files (default: output/)
---skip-compile          Generate LaTeX but do not compile to PDF
+`--jd TEXT`                Provide job description directly
+`--jd-file PATH`           Path to job description file
+`--resume-tex PATH`        Path to LaTeX resume (default: Resume.tex)
+`--output-dir PATH`        Output directory for generated files (default: output/)
+`--skip-compile`           Generate LaTeX but do not compile to PDF
 
 Project Structure
 
