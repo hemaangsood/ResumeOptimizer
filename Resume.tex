@@ -1,0 +1,153 @@
+\documentclass[a4paper,10pt]{article}
+
+% -------------------- PACKAGES --------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{multicol}
+
+\geometry{letterpaper, margin=1in}
+\setlist[itemize]{noitemsep,leftmargin=*}
+\setstretch{1.05}
+\hypersetup{
+	hidelinks
+}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% -------------------- SECTION FORMAT --------------------
+\titleformat{\section}
+{\large\bfseries}
+{}
+{0pt}
+{}
+[\titlerule]
+
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+
+% -------------------- DOCUMENT --------------------
+\begin{document}
+	
+	% -------------------- HEADER --------------------
+	\begin{center}
+		{\LARGE \textbf{John Door}}\\[4pt]
+		\href{tel:+1 6969696969}{+1 696 969 6969} \;|\;
+		\href{mailto:john.door@gmail.com}{john.door@gmail.com} \;|\;
+		\href{https://www.linkedin.com/in/john-door-123456/}{\underline{LinkedIn:} john-door-123456} \;|\;\\
+		\href{https://github.com/johndoor}{\underline{Github:} johndoor} \;|\;
+		\href{https://johndoor.github.io}{\underline{Portfolio:} johndoor.github.io}
+	\end{center}
+	
+	% -------------------- SKILLS --------------------
+	\section{Skills}
+	
+	\begin{center}
+		\begin{minipage}{0.95\textwidth}
+			\begin{multicols}{2}
+				
+				\textbf{Languages} \\
+				Python, JavaScript, Go, Java, Kotlin, HTML, CSS.\\
+				
+				\textbf{Web Development} \\
+				Django, Spring boot, React.js (NextJS, Remix), FastAPI, Next-auth, Redux, Tailwind CSS, NodeJS. \\
+				
+				\textbf{Cloud, DevOps \& Tools} \\
+				AWS (EC2, S3), Git, GitHub, Docker,\\ Nginx, Postman. \\
+				
+				\textbf{CI/CD \& Testing} \\
+				GitLab CI/CD, Docker-in-Docker, pytest, Poetry, PostGIS. \\
+				
+				\columnbreak
+				
+				\textbf{AI \& ML} \\
+				PyTorch, TensorFlow, OpenCV, OpenAI Gym, HuggingFace(Transformers), xgboost.\\
+				
+				\textbf{Data Analysis} \\
+				Pandas, Numpy, Matplotlib, Plotly, Tableau, SQL.\\
+				
+				\textbf{Automation \& Scraping} \\
+				Selenium, Beautiful Soup, Web-Scraping\\
+				
+				\textbf{Databases} \\
+				MongoDB (Atlas), PostgresSQL (Supabase), Oracle Database, FAISS, Qdrant, Redis. \\
+				
+			\end{multicols}
+		\end{minipage}
+	\end{center}
+	
+	% -------------------- EXPERIENCE --------------------
+	\section{Experience}
+	
+	\textbf{Company 1} \\
+	\textit{Employee}
+	\begin{itemize}
+		\item Did \textbf{Stuff} and \textbf{Other Stuff}, amon other things.
+		\item Built a full-stack project for \textbf{fun} using \textbf{MERN} with \textbf{Vite.js} and \textbf{Tailwind CSS}, focusing on modular UI design, API integration, and database connectivity.
+		\item Built a backend server project for an \textbf{Insurance Management System} using Springboot, focusing scalability security and modularity.
+	\end{itemize}
+	
+	\textbf{Company 2} \\
+	\textit{Intern}
+	\begin{itemize}
+		\item Developed an Authentication and Authorization module for myself as part of the internship.
+		\item Worked on a Large Language Model (LLM) interface to locally process and extract insights from sensitive documents using \textbf{RAG}. Integrated a \textbf{voice input pipeline} using Vosk to transcribe user speech into queries, enhancing accessibility and usability.
+	\end{itemize}
+	
+	% -------------------- EDUCATION --------------------
+	\section{Education}
+	
+	\textbf{University} \hfill 2026 -- Present \\
+	\textit{Electrical \& Computer Engineering, Degree} \\
+	GPA - 4.0 / 4.0
+	
+	\vspace{4pt}
+	
+	\textbf{College} \hfill 2021 -- 2025 \\
+	\textit{Bachelor of Stuff} \\
+	GPA - 10.0 / 10.0
+	
+	% -------------------- CERTIFICATIONS --------------------
+	\section{Certifications}
+	
+	\begin{itemize}
+		\item Certification 1.
+		\item Certification 2.
+		\item Certification 3.
+	\end{itemize}
+	
+	% -------------------- PUBLICATIONS --------------------
+	\section{Conference Publications \& Presentations}
+	
+	\begin{itemize}
+		\item \textbf{Paper Title 1}, Conference Name, Year. \\
+		\item \textbf{Paper Title 2}, Conference Name, Year. \\
+	\end{itemize}
+	
+	% -------------------- PROJECTS --------------------
+	\section{Personal Projects}
+	
+	\textbf{Project 1}  Group
+	\begin{itemize}
+		\item Item 1
+		\item Item 2
+	\end{itemize}
+	
+	\textbf{Project 2}  Solo
+	\begin{itemize}
+		\item Item 1
+		\item Item 2
+	\end{itemize}
+	
+	% -------------------- ACHIEVEMENTS --------------------
+	\section{Achievements}
+	
+	\begin{itemize}
+		\item Achievement 1
+		\item Achievement 2
+	\end{itemize}
+	
+\end{document}
