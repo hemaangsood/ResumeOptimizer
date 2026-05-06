@@ -154,7 +154,7 @@ def main() -> None:
         progress.update(task_id, advance=0.5, description="[cyan]Parsing LaTeX resume...")
         file_text = resume_tex_path.read_text(encoding="utf-8")
         prompt = tex_handler._build_prompt(file_text)
-        resume_json_dict = model_handler.prompt_for_json(prompt, cache_key=file_text, use_cache=False)
+        resume_json_dict = model_handler.prompt_for_json(prompt, cache_key=file_text, use_cache=True)
 
         # JD is required and may contain newline characters; always optimize
         progress.update(task_id, advance=1, description="[cyan]Optimizing resume against JD...")
