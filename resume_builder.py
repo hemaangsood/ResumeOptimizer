@@ -6,6 +6,7 @@ import os
 import subprocess
 import sys
 from pathlib import Path
+from typing import Any
 
 import openai
 from rich.console import Console
@@ -146,9 +147,17 @@ def main() -> None:
         console.print(f"[dim]Output: {output_dir}[/dim]\n")
 
         progress.update(task_id, advance=0.5, description="[cyan]Initializing OpenAI client...")
-        client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        client_kwargs: dict[str, Any] = {"api_key": os.getenv("OPENAI_API_KEY")}
+        base_url = os.getenv("OPENAI_BASE_URL")
+        if base_url:
+            client_kwargs["base_url"] = base_url
+        client = openai.OpenAI(**client_kwargs)
         cache = SQLiteCache()
-        model_handler = ModelHandler(client=client, model="gpt-4o-mini", cache=cache)
+        model_handler = ModelHandler(
+            client=client,
+            model=os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
+            cache=cache,
+        )
         tex_handler = TexToJsonNormalizer()
 
         progress.update(task_id, advance=0.5, description="[cyan]Parsing LaTeX resume...")
